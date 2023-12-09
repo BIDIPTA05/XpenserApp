@@ -1,14 +1,31 @@
 import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import BackButton from "./BackButton";
-
+import LoadingScreen from "./LoadingScreen";
+import { tripsRef } from "../config/firbase";
+import { useSelector } from "react-redux";
+import { addDoc } from "firebase/firestore";
 const AddTrips = ({ navigation }: any) => {
   const [place, setPlace] = useState("");
   const [country, setCountry] = useState("");
+  const [loading, setLoading] = useState(false);
+  const { user } = useSelector((state: any) => state.user);
 
-  const HandleAddTrip = () => {
+  const HandleAddTrip = async () => {
     if (place && country) {
-      navigation.navigate("Homescreen");
+      setLoading(true);
+      //adding document ot the firebase database
+      let doc = await addDoc(tripsRef, {
+        place,
+        country,
+        userId: user.uid,
+      });
+      //stop loadin
+      setLoading(false);
+      //go back to the previous screen
+      if (doc && doc.id) {
+        navigation.goBack();
+      }
     } else {
       console.log("Please fill all the fields");
     }
@@ -19,7 +36,7 @@ const AddTrips = ({ navigation }: any) => {
       <View>
         <View className="flex-row mt-3">
           <View>
-            <BackButton />
+            <BackButton navigation={navigation} />
           </View>
           <View className="mx-auto ">
             <Text className="text-xl text-black font-bold mr-8">Add Trips</Text>
@@ -47,14 +64,18 @@ const AddTrips = ({ navigation }: any) => {
         </View>
       </View>
       <View>
-        <TouchableOpacity
-          className="h-16 bg-green-500 mb-5 rounded-full"
-          onPress={HandleAddTrip}
-        >
-          <Text className="mt-3 font-bold text-2xl text-white text-center ">
-            Add Trip
-          </Text>
-        </TouchableOpacity>
+        {loading ? (
+          <LoadingScreen />
+        ) : (
+          <TouchableOpacity
+            className="h-16 bg-green-400 mb-5 rounded-full"
+            onPress={HandleAddTrip}
+          >
+            <Text className="mt-3 font-bold text-2xl text-white text-center ">
+              Add Trip
+            </Text>
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   );
