@@ -3,6 +3,9 @@
 ## Overview
 This mobile application, built using React Native, serves as a comprehensive expense tracker. Users can efficiently manage their expenses by adding trips and recording corresponding expenses against each trip. The app also ensures user authentication and verification through Firebase, providing a secure environment for managing personal financial data.
 
+## Screenshorts:
+
+
 ## Features
 Trip Management: Easily add and manage your trips.
 Expense Tracking: Record and categorize expenses for each trip.
@@ -23,7 +26,7 @@ Node.js and npm installed
 React Native development environment set up
 ## Installation
 1. Clone the repository:
-git clone https://github.com/your-username/expense-tracker-app.git
+git clone https://github.com/BIDIPTA05/XpenserApp/
 cd expense-tracker-app
 2. Install dependencies:
 bash
