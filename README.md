@@ -10,9 +10,12 @@ This mobile application, built using React Native, serves as a comprehensive exp
 ### ![Screenshot_1702287499](https://github.com/BIDIPTA05/XpenserApp/assets/76623158/3905686b-3d01-4d9f-9b50-3f5dad11ed96)
 ### ![Screenshot_1702287520](https://github.com/BIDIPTA05/XpenserApp/assets/76623158/1dcf735e-7054-4e8e-84fb-f0c0d4fd42b1)
 ### ![Screenshot_1702287520](https://github.com/BIDIPTA05/XpenserApp/assets/76623158/6caa586d-dccf-4587-bc96-493f6181a18c)
-### ![Uploading Screenshot_1702287550.png…]()
+
 ### ![Screenshot_1702287558](https://github.com/BIDIPTA05/XpenserApp/assets/76623158/e1817a0e-6ddd-4fcb-be98-b9a15ad4c6ed)
-### ![Screenshot_1702287594](https://github.com/BIDIPTA05/XpenserApp/assets/76623158/f5d838ef-65fc-4f2a-9d5d-dd583362a326)
+
+### ![Screenshot_1702287594](https://github.com/BIDIPTA05/XpenserApp/assets/76623158/4f1963a8-babe-407e-94e1-81c70feed8a4)
+
+
 
 
 
