@@ -1,4 +1,19 @@
 # Resolve react_native_pods.rb with node to allow for hoisting
+
+use_modular_headers!
+
+  pod 'Firebase', :modular_headers => true
+  pod 'FirebaseCoreInternal', :modular_headers => true
+  pod 'GoogleUtilities', :modular_headers => true
+  pod 'FirebaseCore', :modular_headers => true
+  pod 'FirebaseFirestore', :modular_headers => true
+
+
+pod 'RNScreens', :path => '../node_modules/react-native-screens/'
+pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler/'
+pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context/'
+
+
 require Pod::Executable.execute_command('node', ['-p',
   'require.resolve(
     "react-native/scripts/react_native_pods.rb",

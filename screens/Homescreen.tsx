@@ -78,10 +78,10 @@ const Homescreen = ({ navigation }: any) => {
           <Text className="font-semibold text-black">Logout</Text>
         </TouchableOpacity>
       </View>
-      <View className=" flex-row justify-center items-center rounded-xl mx-5 mb-2 bg-blue-200">
+      <View className=" flex-row justify-center items-center rounded-2xl mx-5 mb-2 bg-white">
         <Image
           source={require("../assets/img1.png")}
-          className="w-60 h-60 mt-5"
+          className="w-80 h-60 mt-5"
         />
       </View>
       <View className="flex-row justify-between items-center p-4">

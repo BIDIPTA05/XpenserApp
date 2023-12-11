@@ -45,7 +45,7 @@ const AddTrips = ({ navigation }: any) => {
         <View className="flex-row justify-center mt-3">
           <Image
             source={require("../assets/addtrip.png")}
-            className="w-40 h-48"
+            className="w-80 h-48 rounded-2xl"
           />
         </View>
         <View className="mt-6">

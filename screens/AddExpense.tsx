@@ -4,6 +4,7 @@ import BackButton from "./BackButton";
 import { categories } from "../constants/index";
 import { expensesRef } from "../config/firbase";
 import { addDoc } from "firebase/firestore";
+import LoadingScreen from "./LoadingScreen";
 const AddExpense = ({ navigation, route }: any) => {
   const place = route.params.place;
   const country = route.params.country;
@@ -51,7 +52,7 @@ const AddExpense = ({ navigation, route }: any) => {
         <View className="flex-row justify-center mt-3">
           <Image
             source={require("../assets/addExp.png")}
-            className="w-44 h-56"
+            className="w-80 h-56 bg-white rounded-2xl"
           />
         </View>
         <View className="mt-6">
@@ -88,14 +89,18 @@ const AddExpense = ({ navigation, route }: any) => {
         </View>
       </View>
       <View>
-        <TouchableOpacity
-          className="h-16 bg-green-400 mb-5 rounded-full"
-          onPress={HandleAddTrip}
-        >
-          <Text className="mt-3 font-bold text-2xl text-white text-center ">
-            Add Expense 🚀
-          </Text>
-        </TouchableOpacity>
+        {loading ? (
+          <LoadingScreen />
+        ) : (
+          <TouchableOpacity
+            className="h-16 bg-green-400 mb-5 rounded-full"
+            onPress={HandleAddTrip}
+          >
+            <Text className="mt-3 font-bold text-2xl text-white text-center ">
+              Add Expense 🚀
+            </Text>
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   );
