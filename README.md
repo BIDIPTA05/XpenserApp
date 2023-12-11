@@ -1,4 +1,4 @@
-### The Expense Tracker app
+# The Expense Tracker app
 
 ## Overview
 This mobile application, built using React Native, serves as a comprehensive expense tracker. Users can efficiently manage their expenses by adding trips and recording corresponding expenses against each trip. The app also ensures user authentication and verification through Firebase, providing a secure environment for managing personal financial data.
